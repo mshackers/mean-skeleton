@@ -1,4 +1,4 @@
-FROM dockerfile/nodejs
+FROM iojs:latest
 
 MAINTAINER Matthias Luebken, matthias@catalyst-zero.com
 
