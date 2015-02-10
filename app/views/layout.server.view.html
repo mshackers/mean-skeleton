@@ -32,7 +32,25 @@
 	<meta name="twitter:image" content="/img/brand/logo.png">
 
 	<!-- Fav Icon -->
-	<link href="/modules/core/img/brand/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="57x57" href="/modules/core/img/brand/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/modules/core/img/brand/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/modules/core/img/brand/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/modules/core/img/brand/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/modules/core/img/brand/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/modules/core/img/brand/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/modules/core/img/brand/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/modules/core/img/brand/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/modules/core/img/brand/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/modules/core/img/brand/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/modules/core/img/brand/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/modules/core/img/brand/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/modules/core/img/brand/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/modules/core/img/brand/manifest.json">
+    <link rel="shortcut icon" href="/modules/core/img/brand/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="/modules/core/img/brand/mstile-144x144.png">
+    <meta name="msapplication-config" content="/modules/core/img/brand/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
 
 	<!--Application CSS Files-->
 	{% for cssFile in cssFiles %}
@@ -45,17 +63,11 @@
 </head>
 
 <body class="ng-cloak">
-	<header data-ng-include="'/modules/core/views/header.client.view.html'" class="navbar navbar-fixed-top navbar-inverse"></header>
-	<section class="content">
-		<section class="container">
+<div layout="column" layout-fill>
+	<header data-ng-include="'/modules/core/views/header.client.view.html'"></header>
+	<section>
 			{% block content %}{% endblock %}
-		</section>
 	</section>
-
-	<!--Embedding The User Object-->
-	<script type="text/javascript">
-		var user = {{ user | json | safe }};
-	</script>
 
 	<!--Application JavaScript Files-->
 	{% for jsFile in jsFiles %}
@@ -74,6 +86,7 @@
 		<p><a href="http://browsehappy.com" class="btn btn-primary btn-lg" role="button">Yes, upgrade my browser!</a></p>
 	</section>
 	<![endif]-->
+</div>
 </body>
 
 </html>

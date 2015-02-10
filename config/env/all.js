@@ -24,7 +24,7 @@ module.exports = {
 		secure: false,
 		// Only set the maxAge to null if the cookie shouldn't be expired
 		// at all. The cookie will expunge when the browser is closed.
-		maxAge: null,
+		maxAge: null
 		// To set the cookie in a specific domain uncomment the following 
 		// setting:
 		// domain: 'yourdomain.com'
@@ -43,13 +43,15 @@ module.exports = {
 	assets: {
 		lib: {
 			css: [
-				'public/lib/bootstrap/dist/css/bootstrap.css',
-				'public/lib/bootstrap/dist/css/bootstrap-theme.css',
+				//'public/lib/bootstrap/dist/css/bootstrap.css',
+				//'public/lib/bootstrap/dist/css/bootstrap-theme.css',
+                'public/lib/angular-material/angular-material.css'
 			],
 			js: [
 				'public/lib/angular/angular.js',
 				'public/lib/angular-resource/angular-resource.js',
 				'public/lib/angular-animate/angular-animate.js',
+                'public/lib/angular-aria/angular-aria.js',
                 'public/lib/angular-material/angular-material.js',
 				'public/lib/angular-ui-router/release/angular-ui-router.js',
 				'public/lib/angular-ui-utils/ui-utils.js',
